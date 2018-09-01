@@ -1,0 +1,22 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#07090a"
+    tools:context=".video.VideoActivity">
+
+
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:id="@+id/videoPv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:transitionName="video"
+        android:keepScreenOn="true"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:controller_layout_id="@layout/layout_video_controller"/>
+
+
+</FrameLayout>
