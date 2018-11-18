@@ -15,10 +15,10 @@
         <ImageView
             android:id="@+id/thumbnailIv"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="200dp"
             android:scaleType="fitXY"
             android:minHeight="200dp"
-            android:transitionName="video"
+            android:transitionName="image"
             android:adjustViewBounds="true"
             app:layout_constraintLeft_toLeftOf="parent"
             android:layout_marginTop="@dimen/margin_views"
@@ -52,25 +52,22 @@
                 android:layout_margin="@dimen/margin_views">
 
 
-                <android.support.v7.widget.AppCompatTextView
+                <ImageView
                     android:id="@+id/downloadTv"
                     android:layout_width="wrap_content"
                     android:layout_height="20dp"
-                    android:drawableLeft="@drawable/ic_download"
-                    android:drawablePadding="@dimen/margin_views"
-                    android:text="@string/download"
+                    android:src="@drawable/ic_download"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/shareTv"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent" />
 
-                <android.support.v7.widget.AppCompatTextView
+                <ImageView
                     android:id="@+id/shareTv"
                     android:layout_width="wrap_content"
                     android:layout_height="20dp"
-                    android:drawableLeft="@drawable/ic_share"
-                    android:drawablePadding="@dimen/margin_views"
-                    android:text="@string/share"
+                    android:src="@drawable/ic_share"
+
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"

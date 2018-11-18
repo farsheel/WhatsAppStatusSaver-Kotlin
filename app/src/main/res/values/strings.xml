@@ -37,7 +37,7 @@
     <string name="require_read_write_external_storage_permissin">This app needs read/write your device storage to work . please allow this permission</string>
     <string name="allow">Allow</string>
     <string name="exit">Exit</string>
-
+    <string name="title_activity_image_view">ImageViewActivity</string>
 
 
 </resources>

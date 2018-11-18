@@ -16,6 +16,7 @@ import android.widget.Toast
 import com.bumptech.glide.Glide
 import com.farsheel.statussaver.MyApplication.Companion.fontRegular
 import com.farsheel.statussaver.R
+import com.farsheel.statussaver.image.ImageViewActivity
 import com.farsheel.statussaver.utils.Utils
 import com.farsheel.statussaver.video.VideoActivity
 import kotlinx.android.synthetic.main.layout_status_item.view.*
@@ -103,7 +104,23 @@ class StatusAdapter(private val context: Context) : RecyclerView.Adapter<Recycle
 
                 val activityOptions = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                     ActivityOptions.makeSceneTransitionAnimation(
-                            context as Activity, itemView.thumbnailIv, "video")
+                            context as Activity, itemView.thumbnailIv, "image")
+
+                } else {
+                    context.startActivity(intent)
+                    return
+                }
+
+                context.startActivity(intent, activityOptions.toBundle())
+
+            }else if (view.id == R.id.thumbnailIv){
+
+                val intent = Intent(context, ImageViewActivity::class.java)
+                intent.putExtra("image", file.absolutePath)
+
+                val activityOptions = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    ActivityOptions.makeSceneTransitionAnimation(
+                            context as Activity, itemView.thumbnailIv, "image")
 
                 } else {
                     context.startActivity(intent)

@@ -12,11 +12,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:transitionName="video"
+        android:transitionName="image"
         android:keepScreenOn="true"
         android:textSize="50sp"
         android:textStyle="bold"
         app:controller_layout_id="@layout/layout_video_controller"/>
-
 
 </FrameLayout>
